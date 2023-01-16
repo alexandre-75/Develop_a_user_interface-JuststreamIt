@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <!-- css files -->
+        <link rel="stylesheet" href="basicSetting.css">
+        <link rel="stylesheet" href="Modal\Modal.css">
+        <link rel="stylesheet" href="NavigationBar\NavigationBar.css">
+        <link rel="stylesheet" href="BestMovie\BestMovie.css">
+        <link rel="stylesheet" href="Slideshow\slideshow.css">
+        
+        <title>Document</title>
+    </head>
+    <body>
+
+        <!-- navigation bar -->
+        <header class="header">
+            <img src="Picture\16004298163529_P5.png" alt="logoJustStreamIt" class="logo">
+            <h1 class="h1_header">JustStreamIt</h1>
+            <ul class="list_header">
+                <a href="index.html" style="text-decoration:none"><li class="li_welcome_header">Welcome</li></a>
+                <a href="index.html"style="text-decoration:none"><li class="li_categories_header">Categories</li></a>
+            </ul>
+        </header>
+
+        <main>
+
+            <!-- best movie -->
+            <section id="container">
+                <div id="banner">
+                    <div id="banner__movie_title"></div>
+                    <div id="banner__movie_description"></div>
+                    <img id="banner__img" alt="banner image" src="#" />
+                    <div id="banner__description">
+                        <button id="btnPlay">play</button>
+                        <button id="myBtn">Info</button>
+                    </div>
+                </div>
+            </section>  
+
+            <!-- carousel top rated movies -->
+            <section class="carousel">
+                <h1 class="carousel_title">top rated movies</h1>
+                <div class="carousel_container">
+                    <span class="carousel_btn btn_left"><img class="rightLeftIcon" src="Picture\left-arrow.svg"/></span>
+                    <span class="carousel_btn btn_right"><img class="rightLeftIcon" src="Picture\right-arrow.svg"/></span>
+                    <ul class="item_catalog">
+                        <li class="element"><img id="topRatedMovies_img_1" class="item" src=""/></li>
+                        <li class="element"><img id="topRatedMovies_img_2" class="item" src=""/></li>
+                        <li class="element"><img id="topRatedMovies_img_3" class="item" src=""/></li>
+                        <li class="element"><img id="topRatedMovies_img_4" class="item" src=""/></li>
+                        <li class="element"><img id="topRatedMovies_img_5" class="item" src=""/></li>
+                        <li class="element"><img id="topRatedMovies_img_6" class="item" src=""/></li>
+                        <li class="element"><img id="topRatedMovies_img_7" class="item" src=""/></li>
+                        <li class="element"><img id="topRatedMovies_img_8" class="item" src=""/></li>
+                        <li class="element"><img id="topRatedMovies_img_9" class="item" src=""/></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- carousel western movies -->
+            <section class="carousel">
+                <h1 class="carousel_title">Action movies</h1>
+                <div class="carousel_container">
+                    <span class="carousel_btn btn_left"><img class = "rightLeftIcon" src="Picture\left-arrow.svg"/></span>
+                    <span class="carousel_btn btn-right"><img class = "rightLeftIcon" src="Picture\right-arrow.svg"/></span>
+                    <ul class="item_catalog">
+                        <li class="element"><img id="actionMovies_img_1" class="item" src=""/></li>
+                        <li class="element"><img id="actionMovies_img_2" class="item" src=""/></li>
+                        <li class="element"><img id="actionMovies_img_3" class="item" src=""/></li>
+                        <li class="element"><img id="actionMovies_img_4" class="item" src=""/></li>
+                        <li class="element"><img id="actionMovies_img_5" class="item" src=""/></li>
+                        <li class="element"><img id="actionMovies_img_6" class="item" src=""/></li>
+                        <li class="element"><img id="actionMovies_img_7" class="item" src=""/></li>
+                        <li class="element"><img id="actionMovies_img_8" class="item" src=""/></li>
+                        <li class="element"><img id="actionMovies_img_9" class="item" src=""/></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- carousel biography movies -->
+            <section class="carousel">
+                <h1 class="carousel_title">Biography movies</h1>
+                <div class="carousel_container">
+                    <span class="carousel_btn btn_left"><img class = "rightLeftIcon" alt="Previous slide" src="Picture\left-arrow.svg" /></span>
+                    <span class="carousel_btn btn_right"><img class ="rightLeftIcon" alt="Next slide" src="Picture\right-arrow.svg"/></span>
+                    <ul class="item_catalog">
+                        <li class="element"><img id="biographyMovies_img_1" class="item" src=""/></li>
+                        <li class="element"><img id="biographyMovies_img_2" class="item" src=""/></li>
+                        <li class="element"><img id="biographyMovies_img_3" class="item" src=""/></li>
+                        <li class="element"><img id="biographyMovies_img_4" class="item" src=""/></li>
+                        <li class="element"><img id="biographyMovies_img_5" class="item" src=""/></li>
+                        <li class="element"><img id="biographyMovies_img_6" class="item" src=""/></li>
+                        <li class="element"><img id="biographyMovies_img_7" class="item" src=""/></li>
+                        <li class="element"><img id="biographyMovies_img_8" class="item" src=""/></li>
+                        <li class="element"><img id="biographyMovies_img_9" class="item" src=""/></li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- carousel animation -->
+            <section class="carousel">
+                <h1 class="carousel_title">Animation movies</h1>
+                <div class="carousel_container">
+                    <span class="carousel_btn btn_left"><img class = "rightLeftIcon" alt="Previous slide" src="Picture\left-arrow.svg"/></span>
+                    <span class="carousel_btn btn_right"><img class = "rightLeftIcon" alt="Next slide" src="Picture\right-arrow.svg"/></span>
+                    <ul class="item_catalog">
+                        <li class="element"><img id="animationMovies_img_1" class="item" src=""/></li>
+                        <li class="element"><img id="animationMovies_img_2" class="item" src=""/></li>
+                        <li class="element"><img id="animationMovies_img_3" class="item" src=""/></li>
+                        <li class="element"><img id="animationMovies_img_4" class="item" src=""/></li>
+                        <li class="element"><img id="animationMovies_img_5" class="item" src=""/></li>
+                        <li class="element"><img id="animationMovies_img_6" class="item" src=""/></li>
+                        <li class="element"><img id="animationMovies_img_7" class="item" src=""/></li>
+                    </ul>
+                </div>
+            </section> 
+            
+            <!-- modal -->
+            <section  id="myModal" class="modal-container">
+                <div class="overlay modal-declencheur"></div>
+                <div class="modal modal-content">
+                    <span class="close">&times;</span>
+                    <h1 id="movie_title">titre</h1> 
+                    <dl id="movie_details">
+                        <dt><u>Genre :</u></dt>
+                        <dd id="movie_genre"></dd>
+                        <dt>release date :</dt>
+                        <dd id="movie_release_date"></dd>
+                        <dt>Rated :</dt>
+                        <dd id="movie_rated"></dd>
+                        <dt>Score Imdb :</dt>
+                        <dd id="movie_imdb_score"></dd>
+                        <dt>movie directors :</dt>
+                        <dd id="movie_directors"></dd>
+                        <dt>Actors :</dt>
+                        <dd id="movie_actors"></dd>
+                        <dt>duration :</dt>
+                        <dd id="movie_duration"></dd>
+                        <dt>native countries :</dt>
+                        <dd id="movie_native_countries"></dd>
+                        <dt>Résultat au Box Office :</dt>
+                        <dd id="movie_result_box_office"></dd>
+                        <dt>Synopsis :</dt>
+                        <dd id="movie_resume"></dd>
+                    <img id="movie_image" src="#" />
+                    </dl>
+                </div>  
+            </section>
+
+        </main>
+
+        <!-- JavaScript files -->
+        <script src="main.js"></script>
+        <script src="Modal\Modal.js"></script>
+        <script src="BestMovie\BestMovie.js"></script>
+        <script src="Slideshow\slideshow.js"></script>             
+    </body>
+</html>

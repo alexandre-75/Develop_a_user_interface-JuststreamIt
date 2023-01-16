@@ -1,0 +1,44 @@
+/* --------------------   navigation bar   -------------------- */
+
+
+.header {
+    display: flex;  
+    justify-content:space-around;
+}
+.logo {
+    width: 200px;
+    height: 140px;
+    margin: 30px;
+}
+.h1_header {
+    text-shadow: 15px 15px 10px rgb(25, 24, 24);
+    padding: 20px 50px 20px 50px;   /* top, right, bottom, left */ 
+    color: black;
+    font-size: 3.5em;
+}
+.list_header{
+    display: flex;
+    margin: 10px;
+    margin-top: 40px;
+    list-style-type: none;
+    font-weight:bold;
+    font-size: 1.7em;
+}
+.li_welcome_header {
+    background: linear-gradient(to left, #8e0e00, #1f1c18);
+    color: rgb(255, 255, 255);   /* red, green, blue, opacity */
+    border:  3px solid rgb(44, 35, 35);   /* witdh, type, color */
+    border-radius:25px;
+    text-shadow: 15px 15px 10px black;   /* horizontal, vertical, degraded, color */
+    padding: 20px 50px 20px 50px;
+    margin: 20px;
+}
+.li_categories_header{
+    background: linear-gradient(to right, #8e0e00, #1f1c18);
+    color: rgb(255, 255, 255);
+    border: 3px solid rgb(44, 35, 35); 
+    border-radius: 25px;
+    text-shadow: 10px 10px 10px black;
+    padding: 20px 50px 20px 50px;
+    margin: 20px;
+}

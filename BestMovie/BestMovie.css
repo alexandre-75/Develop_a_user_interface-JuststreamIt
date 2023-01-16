@@ -1,0 +1,98 @@
+/* --------------------   best movie   -------------------- */
+
+
+#container {
+    display: flex;
+    margin-right: 20px;
+    margin-left: 20px;
+    background: linear-gradient(to right, #333333, #dd1818);
+    border-radius: 20px;
+} 
+#banner {
+    position: relative;
+    margin-left: 80px;
+    margin-right: 80px;
+    margin-top: 30px;
+    margin-bottom: 100px;
+    width: 100%;
+    height: 550px;
+    overflow: hidden; 
+    /* background-color:pink; */
+    border-radius: 20px;
+    box-shadow: 10px 20px 40px #ccd0d2;
+    text-align: center;
+}
+#banner__movie_title {
+    font-family: 'Pacifico', cursive;
+    font-size: 2rem;
+    color: white;
+    position: absolute;
+    top: 10px;
+    left: 50px;
+    width: 30%;
+    padding: 20px 100px;
+    border: 3px solid black;
+    background-color:rgba(128, 175, 205, 0.8);
+}
+#banner__movie_description {
+    font-family: 'Pacifico', cursive;
+    position: absolute;
+    top: 150px;
+    left: 50px;
+    width: 30%;
+    padding: 20px 100px;
+    background-color:rgba(128, 175, 205, 0.8);
+    color: #fff;   
+    border: 3px solid black;
+}
+#banner__img {
+    border: 4px solid black;
+    border-radius: 25px;
+    position: absolute;
+    top: 10px;
+    right: 250px;
+    width: 280px;    
+}
+#banner__description {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    height: 100px;
+    background-color: rgba(128, 175, 205, 0.8);
+    color: white;
+}
+#btnPlay {
+    position: absolute;
+    right: 760px;
+    bottom: 7px;
+    background-color: burlywood;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 30px 15px;
+    border: 3px solid black;
+    font-weight: bold;
+    font-size: 1rem;
+}
+#btnPlay:hover {
+    background-color: purple;
+}
+#myBtn {
+    position: absolute;
+    right: 600px;
+    bottom: 7px;
+    background-color: burlywood;
+    color: white;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    padding: 30px 15px;
+    border: 3px solid black;
+    font-weight: bold;
+    font-size: 1rem;     
+}
+#myBtn:hover {
+    background-color: greenyellow;
+}
