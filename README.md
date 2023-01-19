@@ -35,27 +35,8 @@ Refer to the [documentation](https://github.com/OpenClassrooms-Student-Center/OC
   
   
   
- ## Improvements
+## Improvements
  
 Here is a list of possible improvements:
 - Improve the design of the site.
 - choose the genre of the films. 
-
-
-## Resources used
-
-Create your website with HTML5 and CSS3 - Mathieu Nebra 
-    
-    https://openclassrooms.com/fr/courses/1603881-creez-votre-site-web-avec-html5-et-css3
-
-Adopt REST APIs for your web projects - Kassandre Pedro
-
-    https://openclassrooms.com/fr/courses/6573181-adoptez-les-api-rest-pour-vos-projets-web
-
-Learn to program with JavaScript - Will Alexander
-
-    https://openclassrooms.com/fr/courses/6175841-apprenez-a-programmer-avec-javascript
-
-Write JavaScript for the Web - Fabien Henon
-
-    https://openclassrooms.com/fr/courses/5543061-ecrivez-du-javascript-pour-le-web
