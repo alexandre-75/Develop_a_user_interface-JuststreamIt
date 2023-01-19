@@ -25,10 +25,10 @@ let carouselPrev = document.querySelector('.btn_left');
 let carouselNext = document.querySelector('.btn_right');
 
 
-
-
 carousels.forEach(function(carousel) {
+    console.log(carousels)
     carouselize(carousel);
+
 });
 
 
@@ -44,6 +44,7 @@ function carouselize(carousel) {
     // Function to move the product list
     function moveProductList() {
         productList.style.transform = "translateX(-" + 150 * productListSteps + "px)";
+        
     }
 
     // Added event listeners for "next" and "previous" buttons
