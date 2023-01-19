@@ -1,7 +1,24 @@
 
 const carousels = document.querySelectorAll('.carousel');
-let productList = document.querySelector('.item_catalog');
-            console.log(productList)
+console.log(carousels)
+
+const carouselContainer = document.querySelectorAll('carousel_container');
+console.log(carouselContainer)
+
+let itemCatalogTopRated = document.querySelector('.item_catalog_top_rated');
+let itemCatalogAction = document.querySelector('.item_catalog_action');
+let itemCatalogBiography = document.querySelector('.item_catalog_biography');
+let itemCatalogAnimation = document.querySelector('.item_catalog_animation');
+console.log(itemCatalogTopRated)
+console.log(itemCatalogAction)
+console.log(itemCatalogBiography)
+console.log(itemCatalogAnimation)
+
+let products = document.querySelectorAll('.item');
+console.log(products)
+
+// let btnLeftAction = document.querySelector('.btn_left_action');
+// let btnRightAction = document.querySelector('.btn_right_action');
 
 let productListWidth = 0;
 let productListSteps = 0;
@@ -9,20 +26,12 @@ let productListSteps = 0;
 // et les initialisent à 0. productListWidth sera utilisé pour stocker la 
 // largeur totale de la liste de produits et productListSteps sera utilisé
 //  pour stocker le nombre de pas pour déplacer la liste de produits.
-
-
-let products = document.querySelectorAll('.item');
-            console.log(products)
+            
 let productAmount = 0;
 let productAmountVisible = 4;
 // productAmount est utilisé pour stocker le nombre total de produits et 
 // productAmountVisible est utilisé pour stocker le nombre de produits visibles 
 // à la fois
-
-
-let carouselPrev = document.querySelector('.btn_left');
-            console.log(carouselPrev)
-let carouselNext = document.querySelector('.btn_right');
 
 
 carousels.forEach(function(carousel) {
@@ -38,31 +47,106 @@ function carouselize(carousel) {
     products.forEach(product => {
         productAmount++;
         productListWidth += 250;
-        productList.style.width = productListWidth + "px";
+        itemCatalogTopRated.style.width = productListWidth + "px";
+        itemCatalogAction.style.width = productListWidth + "px";
+        itemCatalogBiography.style.width = productListWidth + "px";
+        itemCatalogAnimation.style.width = productListWidth + "px";
     });
     
-    // Function to move the product list
-    function moveProductList() {
-        productList.style.transform = "translateX(-" + 150 * productListSteps + "px)";
-        
-    }
+    // carousel top rated movies ----------------------------------------------------------------------------------------
+    
+    let btnLeftTopRated = document.querySelector('.btn_left_top_rated');
+    let btnRightTopRated = document.querySelector('.btn_right_top_rated');
 
-    // Added event listeners for "next" and "previous" buttons
-    carouselNext.addEventListener("click", function () {
+    btnRightTopRated.addEventListener("click", function () {
         if (productListSteps < productAmount - productAmountVisible) {
             productListSteps++;
-            moveProductList();
+            slideTopRated();
         }
-    });
-
-    carouselPrev.addEventListener("click", function () {
+    })
+    btnLeftTopRated.addEventListener("click", function () {
         if (productListSteps > 0) {
             productListSteps--;
-            moveProductList();
+            slideTopRated();
         }
-    });
+    })
+    function slideTopRated() {
+        itemCatalogTopRated.style.transform = "translateX(-" + 150 * productListSteps + "px)";  
+    }
+    // carousel action movies ----------------------------------------------------------------------------------------
+
+    let btnLeftAction = document.querySelector('.btn_left_action');
+    let btnRightAction = document.querySelector('.btn_right_action');
+
+    btnRightAction.addEventListener("click", function () {
+        if (productListSteps < productAmount - productAmountVisible) {
+            productListSteps++;
+            slideAction();
+        }
+    })
+    btnLeftAction.addEventListener("click", function () {
+        if (productListSteps > 0) {
+            productListSteps--;
+            slideAction();
+        }
+    })
+    function slideAction() {
+        itemCatalogAction.style.transform = "translateX(-" + 150 * productListSteps + "px)";    
+    }
+    // carousel biography movies ----------------------------------------------------------------------------------------
+
+    let btnLeftBiography = document.querySelector('.btn_left_biography');
+    let btnRightBiography = document.querySelector('.btn_right_biography');
+
+    btnRightBiography.addEventListener("click", function () {
+        if (productListSteps < productAmount - productAmountVisible) {
+            productListSteps++;
+            slideBiography();
+        }
+    })
+    btnLeftBiography.addEventListener("click", function () {
+        if (productListSteps > 0) {
+            productListSteps--;
+            slideBiography();
+        }
+    })
+    function slideBiography() {
+        itemCatalogBiography.style.transform = "translateX(-" + 150 * productListSteps + "px)";    
+    }
+    // carousel Animation movies ----------------------------------------------------------------------------------------
+
+    let btnLeftAnimation = document.querySelector('.btn_left_animation');
+    let btnRightAnimation = document.querySelector('.btn_right_animation');
+
+    btnRightAnimation.addEventListener("click", function () {
+        if (productListSteps < productAmount - productAmountVisible) {
+            productListSteps++;
+            slideAnimation();
+        }
+    })
+    btnLeftAnimation.addEventListener("click", function () {
+        if (productListSteps > 0) {
+            productListSteps--;
+            slideAnimation();
+        }
+    })
+    function slideAnimation() {
+        itemCatalogAnimation.style.transform = "translateX(-" + 150 * productListSteps + "px)";    
+    }
+
+    
+
 }
 
+
+
+function updateImgSrc(data, prefix, count, startIndex = 1) {
+    for (let i = 0; i < count; i++) {
+        const img = document.getElementById(`${prefix}${i + startIndex}`);
+        img.src = data.results[i].image_url;
+        img.value = data.results[i].id;
+    }
+}
 
 //  carousel top rated Movies -----------------------------------------------------------------------------------
 
@@ -88,14 +172,6 @@ async function fetchData11() {
 }
 fetchData11();
 
-function updateImgSrc(data, prefix, count, startIndex = 1) {
-    for (let i = 0; i < count; i++) {
-        const img = document.getElementById(`${prefix}${i + startIndex}`);
-        img.src = data.results[i].image_url;
-        img.value = data.results[i].id;
-    }
-}
-
 //  carousel Action Movies -----------------------------------------------------------------------------------
 
 async function fetchData5() {
@@ -119,14 +195,6 @@ async function fetchData6() {
     }
 }
 fetchData6();
-
-function updateImgSrc(data, prefix, count, startIndex = 1) {
-    for (let i = 0; i < count; i++) {
-        const img = document.getElementById(`${prefix}${i + startIndex}`);
-        img.src = data.results[i].image_url;
-        img.value = data.results[i].id;
-    }
-}
 
 //  carousel Biography Movies -----------------------------------------------------------------------------------
 
@@ -152,14 +220,6 @@ async function fetchData2() {
 }
 fetchData2();
 
-function updateImgSrc(data, prefix, count, startIndex = 1) {
-    for (let i = 0; i < count; i++) {
-        const img = document.getElementById(`${prefix}${i + startIndex}`);
-        img.src = data.results[i].image_url;
-        img.value = data.results[i].id;
-    }
-}
-
 //  carousel Animation Movies -----------------------------------------------------------------------------------
 
 async function fetchData3() {
@@ -183,18 +243,6 @@ async function fetchData4() {
     }
 }
 fetchData4();
-
-function updateImgSrc(data, prefix, count, startIndex = 1) {
-    for (let i = 0; i < count; i++) {
-        const img = document.getElementById(`${prefix}${i + startIndex}`);
-        img.src = data.results[i].image_url;
-        img.value = data.results[i].id;
-    }
-}
-
-
-
-
 
 const modal = document.getElementById("myModal");
 const span = document.getElementsByClassName("close")[0];
