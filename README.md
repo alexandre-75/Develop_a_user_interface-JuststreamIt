@@ -19,7 +19,7 @@ As well as :
 
 ## Project recovery
 
-     $ git clone https://github.com/alexandre-75/Develop_a_user_interface-JuststreamIt.git
+    `git clone https://github.com/alexandre-75/Develop_a_user_interface-JuststreamIt.git`
 
 This webpage uses the [ OCMovies API ](https://github.com/OpenClassrooms-Student-Center/OCMovies-API-EN-FR) which must be running locally to work.
 
