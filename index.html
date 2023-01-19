@@ -31,10 +31,10 @@
             <!-- best movie -->
             <section id="container">
                 <div id="banner">
-                    <div id="banner__movie_title"></div>
-                    <div id="banner__movie_description"></div>
-                    <img id="banner__img" alt="banner image" src="#" />
-                    <div id="banner__description">
+                    <div id="best_movie_title"></div>
+                    <div id="best_movie_description"></div>
+                    <img id="best_movie_img" alt="banner image" src="#" />
+                    <div id="banner_btn">
                         <button id="btnPlay">play</button>
                         <button id="myBtn">Info</button>
                     </div>
@@ -42,12 +42,12 @@
             </section>  
 
             <!-- carousel top rated movies -->
-            <section class="carousel" id="1">
+            <section class="carousel">
                 <h1 class="carousel_title">top rated movies</h1>
                 <div class="carousel_container">
                     <span class="carousel_btn btn_left_top_rated"><img class="rightLeftIcon" src="Picture\left-arrow.svg"/></span>
                     <span class="carousel_btn btn_right_top_rated"><img class="rightLeftIcon" src="Picture\right-arrow.svg"/></span>
-                    <ul class="item_catalog_top_rated">
+                    <ul class="item_catalog_top_rated transform">
                         <li class="element"><img id="topRatedMovies_img_1" class="item" src=""/></li>
                         <li class="element"><img id="topRatedMovies_img_2" class="item" src=""/></li>
                         <li class="element"><img id="topRatedMovies_img_3" class="item" src=""/></li>
@@ -62,12 +62,12 @@
             </section>
 
             <!-- carousel action movies -->
-            <section class="carousel" id="2">
+            <section class="carousel">
                 <h1 class="carousel_title">Action movies</h1>
                 <div class="carousel_container">
                     <span class="carousel_btn btn_left_action"><img class = "rightLeftIcon" src="Picture\left-arrow.svg"/></span>
                     <span class="carousel_btn btn_right_action"><img class = "rightLeftIcon" src="Picture\right-arrow.svg"/></span>
-                    <ul class="item_catalog_action">
+                    <ul class="item_catalog_action transform">
                         <li class="element"><img id="actionMovies_img_1" class="item" src=""/></li>
                         <li class="element"><img id="actionMovies_img_2" class="item" src=""/></li>
                         <li class="element"><img id="actionMovies_img_3" class="item" src=""/></li>
@@ -82,12 +82,12 @@
             </section>
 
             <!-- carousel biography movies -->
-            <section class="carousel" id="3">
+            <section class="carousel">
                 <h1 class="carousel_title">Biography movies</h1>
                 <div class="carousel_container">
                     <span class="carousel_btn btn_left_biography"><img class = "rightLeftIcon" alt="Previous slide" src="Picture\left-arrow.svg" /></span>
                     <span class="carousel_btn btn_right_biography"><img class ="rightLeftIcon" alt="Next slide" src="Picture\right-arrow.svg"/></span>
-                    <ul class="item_catalog_biography">
+                    <ul class="item_catalog_biography transform">
                         <li class="element"><img id="biographyMovies_img_1" class="item" src=""/></li>
                         <li class="element"><img id="biographyMovies_img_2" class="item" src=""/></li>
                         <li class="element"><img id="biographyMovies_img_3" class="item" src=""/></li>
@@ -102,12 +102,12 @@
             </section>
 
             <!-- carousel animation -->
-            <section class="carousel" id="4">
+            <section class="carousel">
                 <h1 class="carousel_title">Animation movies</h1>
                 <div class="carousel_container">
                     <span class="carousel_btn btn_left_animation"><img class = "rightLeftIcon" alt="Previous slide" src="Picture\left-arrow.svg"/></span>
                     <span class="carousel_btn btn_right_animation"><img class = "rightLeftIcon" alt="Next slide" src="Picture\right-arrow.svg"/></span>
-                    <ul class="item_catalog_animation">
+                    <ul class="item_catalog_animation transform">
                         <li class="element"><img id="animationMovies_img_1" class="item" src=""/></li>
                         <li class="element"><img id="animationMovies_img_2" class="item" src=""/></li>
                         <li class="element"><img id="animationMovies_img_3" class="item" src=""/></li>
@@ -123,13 +123,15 @@
             <section  id="myModal" class="modal-container">
                 <div class="overlay"></div>
                 <div class="modal modal-content">
-                    <span class="close">&times;</span>
+                    <span class="close">X</span>
                     <h1 id="movie_title">titre</h1> 
-                    <dl id="movie_details">
-                        <dt><u>Genre :</u></dt>
-                        <dd id="movie_genre"></dd>
+                    <dl id="movie_details">   <!-- <dl> is the tag that contains all the definitions. -->
+                        <dt><u>Genre :</u></dt>   <!-- <dt> is the tag that contains the term to be defined. -->
+                        <dd id="movie_genre"></dd>   <!-- <dd> is the tag that contains the definition of the term that is just before it in the list. -->
                         <dt>release date :</dt>
                         <dd id="movie_release_date"></dd>
+                        <dt>Synopsis :</dt>
+                        <dd id="movie_resume"></dd>
                         <dt>Rated :</dt>
                         <dd id="movie_rated"></dd>
                         <dt>Score Imdb :</dt>
@@ -144,8 +146,6 @@
                         <dd id="movie_native_countries"></dd>
                         <dt>Résultat au Box Office :</dt>
                         <dd id="movie_result_box_office"></dd>
-                        <dt>Synopsis :</dt>
-                        <dd id="movie_resume"></dd>
                     <img id="movie_image" src="#" />
                     </dl>
                 </div>  

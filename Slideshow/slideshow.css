@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Vinyl&display=swap');   /* fonts.google.com */
 
 .carousel {
-  background:linear-gradient(to left, #616161, #9bc5c3);
+  background:linear-gradient(to left, #616161, #9bc5c3);   /* uigradients.com */
   margin-left: 40px;
   margin-right: 40px;
   margin-bottom: 40px;
@@ -18,7 +18,7 @@
 }
 .carousel_container {
   position: relative;
-  overflow: hidden;
+  overflow: hidden;   /*indicates that elements that exceed the element in question should be hidden.*/
   margin: auto;
   width: 1070px;
   height: 300px;
@@ -33,13 +33,23 @@
   top: 75px;
   height: 150px;
   width: 150px;
-  background-color:rgba(6, 174, 246, 0.0); ;
-  transition: background-color 0.5s; 
 }  
 .carousel_btn:hover {
   background-color: rgba(255, 255, 255, 1)
 }
-.btn_left {
+.btn_left_top_rated {
+  left: 10px;
+  border-radius: 10%;
+}
+.btn_left_action {
+  left: 10px;
+  border-radius: 10%;
+}
+.btn_left_biography {
+  left: 10px;
+  border-radius: 10%;
+}
+.btn_left_animation{
   left: 10px;
   border-radius: 10%;
 }
@@ -51,15 +61,15 @@
   width: 80px;
   margin-top: 35px;
 }
-.item_catalog {
-  transition: transform 1s;
-  background-color: blue;
+.transform {
+  transition: transform 2s;
   height: 100%;
+  background-color: #9bc5c3;
 }
 .element {
-  padding-top: 1px; /* 10px */
   display: inline-block;
 }
 .item {
   border-radius: 15px;
+  margin-top: 15px;
 }

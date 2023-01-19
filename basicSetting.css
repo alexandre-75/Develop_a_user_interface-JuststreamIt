@@ -1,7 +1,6 @@
 
 body{
-    background:linear-gradient(to left, #0f2027, #203a43, #2c5364);   /* uigradients.com */
-    font-family: 'Dancing Script', cursive;
+    background:linear-gradient(to left, #0f2027, #203a43, #2c5364);
     color: black;
     font-size: 1 em;   
     padding: 0; 

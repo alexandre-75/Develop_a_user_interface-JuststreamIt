@@ -1,4 +1,3 @@
-
 #container {
     display: flex;
     margin-right: 20px;
@@ -7,7 +6,7 @@
     border-radius: 20px;
 } 
 #banner {
-    position: relative; 
+    position: relative;   /* relative property allows an element to be offset from its initial position in the page flow. */
     margin-left: 80px;
     margin-right: 80px;
     margin-top: 30px;
@@ -19,11 +18,11 @@
     box-shadow: 10px 20px 40px #ccd0d2;
     text-align: center;
 }
-#banner__movie_title {
+#best_movie_title {
     font-family: 'Pacifico', cursive;
     font-size: 2rem;
     color: white;
-    position: absolute;
+    position: absolute;   /* the absolute property is used to position an element relative to its parent or to the window */
     top: 10px;
     left: 50px;
     width: 30%;
@@ -31,7 +30,7 @@
     border: 3px solid black;
     background-color:rgba(128, 175, 205, 0.8);
 }
-#banner__movie_description {
+#best_movie_description {
     font-family: 'Pacifico', cursive;
     position: absolute;
     top: 150px;
@@ -42,7 +41,7 @@
     color: #fff;   
     border: 3px solid black;
 }
-#banner__img {
+#best_movie_img {
     border: 4px solid black;
     border-radius: 25px;
     position: absolute;
@@ -50,7 +49,7 @@
     right: 250px;
     width: 280px;    
 }
-#banner__description {
+#banner_btn {
     position: absolute;
     right: 0;
     bottom: 0;

@@ -1,6 +1,3 @@
-
-// ---------------------------------------------------------------------------------------------
-
 const movieTitle = document.getElementById("movie_title");
 const movieGenre = document.getElementById("movie_genre");
 const movieReleaseDate = document.getElementById("movie_release_date");
@@ -15,7 +12,7 @@ const movieResume = document.getElementById("movie_resume");
 const movieImg = document.getElementById("movie_image");
 
 
-// En séparant la logique de récupération des données de celle de la mise à jour de la page
+// The first function, getModalData, focuses on retrieving data from the API,
 async function getModalData(id) {
     try {
         const response = await fetch(`http://localhost:8000/api/v1/titles/${id}`);
@@ -40,7 +37,7 @@ async function getModalData(id) {
         console.log("une erreur s'est produite :", err);
     }
 }
-
+// The second function, updateModal, focuses on updating the user interface with the received data.
 function updateModal(data) {
     movieTitle.innerText = data.title;
     movieGenre.innerText = data.genre;
@@ -55,10 +52,6 @@ function updateModal(data) {
     movieResume.innerText = data.resume;
     movieImg.src = data.image;
 }
-
-// ----------------------------------------------------------------------------------------------------
-
-
 
 
 

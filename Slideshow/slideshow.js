@@ -1,52 +1,26 @@
-
 const carousels = document.querySelectorAll('.carousel');
-console.log(carousels)
-
 const carouselContainer = document.querySelectorAll('carousel_container');
-console.log(carouselContainer)
-
 let itemCatalogTopRated = document.querySelector('.item_catalog_top_rated');
 let itemCatalogAction = document.querySelector('.item_catalog_action');
 let itemCatalogBiography = document.querySelector('.item_catalog_biography');
 let itemCatalogAnimation = document.querySelector('.item_catalog_animation');
-console.log(itemCatalogTopRated)
-console.log(itemCatalogAction)
-console.log(itemCatalogBiography)
-console.log(itemCatalogAnimation)
-
-let products = document.querySelectorAll('.item');
-console.log(products)
-
-// let btnLeftAction = document.querySelector('.btn_left_action');
-// let btnRightAction = document.querySelector('.btn_right_action');
-
+let items = document.querySelectorAll('.item');
 let productListWidth = 0;
-let productListSteps = 0;
-// Ces lignes déclarent les variables productListWidth et productListSteps 
-// et les initialisent à 0. productListWidth sera utilisé pour stocker la 
-// largeur totale de la liste de produits et productListSteps sera utilisé
-//  pour stocker le nombre de pas pour déplacer la liste de produits.
-            
+let productListSteps = 0;           
 let productAmount = 0;
 let productAmountVisible = 4;
-// productAmount est utilisé pour stocker le nombre total de produits et 
-// productAmountVisible est utilisé pour stocker le nombre de produits visibles 
-// à la fois
 
-
+// The forEach() method takes a function as a parameter that is executed for each element of the array.
 carousels.forEach(function(carousel) {
-    console.log(carousels)
-    carouselize(carousel);
-
+    slideShow(carousel);   // the "slideShow" function will be executed for each carousel in the "carousels" array.
 });
 
-
-function carouselize(carousel) {
+function slideShow(carousel) {
     
-    // Boucle pour compter les produits et ajuster la largeur de la liste de produits
-    products.forEach(product => {
-        productAmount++;
-        productListWidth += 250;
+    // the forEach() method loops through an array of items and performs actions on each item.
+    items.forEach(item => {
+        productAmount++;   // Increment the "productAmount" variable by 1 for each array element.
+        productListWidth += 250;   // Add 250 to the "productListWidth" variable for each array element.
         itemCatalogTopRated.style.width = productListWidth + "px";
         itemCatalogAction.style.width = productListWidth + "px";
         itemCatalogBiography.style.width = productListWidth + "px";
@@ -71,8 +45,9 @@ function carouselize(carousel) {
         }
     })
     function slideTopRated() {
-        itemCatalogTopRated.style.transform = "translateX(-" + 150 * productListSteps + "px)";  
+        itemCatalogTopRated.style.transform = "translateX(-" + 100 * productListSteps + "px)";  
     }
+
     // carousel action movies ----------------------------------------------------------------------------------------
 
     let btnLeftAction = document.querySelector('.btn_left_action');
@@ -91,8 +66,9 @@ function carouselize(carousel) {
         }
     })
     function slideAction() {
-        itemCatalogAction.style.transform = "translateX(-" + 150 * productListSteps + "px)";    
+        itemCatalogAction.style.transform = "translateX(-" + 100 * productListSteps + "px)";    
     }
+
     // carousel biography movies ----------------------------------------------------------------------------------------
 
     let btnLeftBiography = document.querySelector('.btn_left_biography');
@@ -111,8 +87,9 @@ function carouselize(carousel) {
         }
     })
     function slideBiography() {
-        itemCatalogBiography.style.transform = "translateX(-" + 150 * productListSteps + "px)";    
+        itemCatalogBiography.style.transform = "translateX(-" + 100 * productListSteps + "px)";    
     }
+
     // carousel Animation movies ----------------------------------------------------------------------------------------
 
     let btnLeftAnimation = document.querySelector('.btn_left_animation');
@@ -131,14 +108,11 @@ function carouselize(carousel) {
         }
     })
     function slideAnimation() {
-        itemCatalogAnimation.style.transform = "translateX(-" + 150 * productListSteps + "px)";    
+        itemCatalogAnimation.style.transform = "translateX(-" + 100 * productListSteps + "px)";    
     }
-
-    
-
 }
 
-
+// ---------------------------------------------------------------------------------------------------------------
 
 function updateImgSrc(data, prefix, count, startIndex = 1) {
     for (let i = 0; i < count; i++) {
@@ -244,6 +218,7 @@ async function fetchData4() {
 }
 fetchData4();
 
+// ------------------------------------------------------------------------------------------------------------------------------------
 const modal = document.getElementById("myModal");
 const span = document.getElementsByClassName("close")[0];
 
@@ -251,7 +226,7 @@ myBtn.addEventListener('click', () => {
     modal.style.display = "block";
     getModalData(myBtn.value);
 });
-for (buttons of products) {
+for (buttons of items) {
     buttons.onclick = function () {
         let clicked = this.value;
         modal.style.display = "block";
